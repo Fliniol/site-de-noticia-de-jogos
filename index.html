@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Respawn — notícias de jogos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#" class="logo">Respawn</a>
+    <nav class="main-nav">
+      <a href="#" data-cat="todas" class="nav-link is-active">Notícias</a>
+      <a href="#analises" data-cat="analise" class="nav-link">Análises</a>
+      <a href="#" data-cat="guia" class="nav-link">Guias</a>
+      <a href="#" data-cat="lancamento" class="nav-link">Lançamentos</a>
+    </nav>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Buscar matéria…">
+    </div>
+  </div>
+  <div class="ticker">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="heroSection">
+    <!-- preenchido via JS -->
+  </section>
+
+  <section class="feed">
+    <div class="wrap">
+      <div class="feed-head">
+        <h2>O que rolou</h2>
+        <div class="feed-filtros" id="feedFiltros">
+          <button class="filtro-btn is-active" data-filtro="todas">Tudo</button>
+          <button class="filtro-btn" data-filtro="noticia">Notícias</button>
+          <button class="filtro-btn" data-filtro="guia">Guias</button>
+          <button class="filtro-btn" data-filtro="lancamento">Lançamentos</button>
+        </div>
+      </div>
+      <div class="feed-grid" id="feedGrid">
+        <!-- preenchido via JS -->
+      </div>
+      <p class="feed-empty" id="feedEmpty" hidden>Nenhuma matéria encontrada com esse termo.</p>
+    </div>
+  </section>
+
+  <section id="analises" class="analises">
+    <div class="wrap">
+      <h2>Análises da semana</h2>
+      <div class="analises-list" id="analisesList">
+        <!-- preenchido via JS -->
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <div class="wrap newsletter-inner">
+      <div>
+        <h2>Direto no seu e-mail</h2>
+        <p>Um resumo por semana. Sem spam, sem clickbait duplicado.</p>
+      </div>
+      <form id="newsletterForm" class="newsletter-form">
+        <input type="email" placeholder="seu@email.com" required id="newsletterEmail">
+        <button type="submit" class="btn btn-primary">Assinar</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p class="footer-logo">Respawn</p>
+    <p class="footer-note">Feito por quem joga. Cobertura independente de jogos, sem review copiado de press-kit.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
